@@ -25,18 +25,18 @@ Route::get('/', HomeController::class);
 //     return "Bienvenido a la pagina cursos";
 // });
 
-Route::get('cursos', [CursoController::class, 'index']);
+Route::get('cursos', [CursoController::class, 'index'])->name('cursos.index');
 
 // Route::get('cursos/create', function () {
 //     return "En esta pagina podras crear un curso";
 // });
-Route::get('cursos/create', [CursoController::class, 'create']);
+Route::get('cursos/create', [CursoController::class, 'create'])->name('cursos.create');
 
 // Route::get('cursos/{curso}', function ($curso) {
 //     return "Bienvenido al curso " . $curso;
 // });
 
-Route::get('cursos/{curso}', [CursoController::class, 'show']);
+Route::get('cursos/{id}', [CursoController::class, 'show'])->name('cursos.show');
 
 /**
  * TODO: El simbolo (?) despues de la variable significa que la variable es opcional al pasarle por la URL
