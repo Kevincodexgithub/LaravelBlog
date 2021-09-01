@@ -19,7 +19,9 @@ use App\Http\Controllers\CursoController;
 //     return "Bienvenido a la pagina principal";
 // });
 
-Route::get('/', HomeController::class);
+Route::get('/', HomeController::class)->name('home');
+
+Route::view('nosotros', 'nosotros')->name('nosotros');
 
 // Route::get('cursos', function () {
 //     return "Bienvenido a la pagina cursos";

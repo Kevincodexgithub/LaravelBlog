@@ -8,26 +8,33 @@
     <title>@yield('title')</title>
     {{-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> --}}
     <style>
-        html {
+        /* html {
             filter: invert(100%);
             color: white;
             background-color: gray;
-        }
+        } */
 
     </style>
     {{-- favicon --}}
     {{-- estilos --}}
+    <style>
+        .active {
+            color: red;
+            font-weight: bold;
+        }
+
+    </style>
 </head>
 
 <body>
     {{-- header --}}
-
+    @include('layouts.partials.header')
     {{-- nav --}}
 
     @yield('content')
 
     {{-- footer --}}
-
+    @include('layouts.partials.footer')
     {{-- script --}}
 </body>
 

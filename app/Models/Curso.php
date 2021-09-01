@@ -14,4 +14,9 @@ class Curso extends Model
     protected $guarded = []; //se asignan los campos que no se van a guardar en la base
 
     // protected $table = "users"; // ignora la convencion y va afectar a la tabla users en la base
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }
